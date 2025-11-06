@@ -2,6 +2,7 @@ import {Routes,Route} from 'react-router-dom'
 import Nav from './Components/Nav'
 import Home from './Components/Home'
 import List from './Components/List'
+import Chatbot from './Components/Chatbot'
 export default function App(){
   return(
     <>
@@ -9,6 +10,7 @@ export default function App(){
     <Routes>
       <Route path='/' element={<Home/>}/>
       <Route path="/list" element={<List/>}/>
+      <Route path="/chatbot" element={<Chatbot/>}/>
     </Routes>
     </>
   );
