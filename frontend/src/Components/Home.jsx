@@ -16,7 +16,7 @@ export default function Home() {
     setSearched(true);
 
     try {
-      const res = await axios.get(`https://phishassessor-backend.onrender.com`);
+      const res = await axios.get(`https://phishassessor-backend.onrender.com/check/${inp}`);
       const data = res.data?.data || [];
       setResult(Array.isArray(data) ? data : []);
     } catch (err) {
