@@ -12,7 +12,7 @@ export default function List() {
   const fetchData = async () => {
     setLoading(true);
     try {
-      const res = await axios.get(`https://phishassessor-backend.onrender.com`);
+      const res = await axios.get(`https://phishassessor-backend.onrender.com/malware?filter=${range}`);
       const domainsOnly = (res.data.data || []).filter((item) =>
         /^[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(item.ioc)
       );
